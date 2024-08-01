@@ -38,11 +38,9 @@ public:
     void back_track(TreeNode* node, string& solutionP, vector<string>& solutionC) {
         if (node->left == nullptr and node->right == nullptr){
             //Cuando soy un nodo sin hijos añado mi valor y acabo 
-                string temp = solutionP;
                 solutionP += "->";
                 solutionP += to_string(node->val);
                 solutionC.push_back(solutionP);
-                solutionP = temp;
         }
         else {
             if (node->left != nullptr) {
